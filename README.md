@@ -1,21 +1,33 @@
-# <img src="public/icon.png" width="48" align="center" /> Wazoo
+# <img src="public/icon.png" width="48" align="center" /> Wazoo (Deprecated)
 
-**Wazoo** is an ambient media engine designed for those who want to experience their local video collection without the burden of choice. Built as a "moving mood-board" for artists, designers, and curators, Wazoo provides a non-stop, feed of visuals that flows continuously based on your library and optional search queries.
+> [!WARNING]
+> ## ⚠️ DEPRECATION NOTICE
+>
+> **This repository (`wazoo-electron`) is deprecated and is no longer maintained.**
+>
+> It has been completely superseded by the native Rust rewrite:
+> ### 👉 **[Wazoo (Rust) — github.com/alkali-softworks/wazoo](https://github.com/alkali-softworks/wazoo)**
+>
+> ### Why switch to Wazoo (Rust)?
+> - **Native Media Engine:** Built on libmpv and WGPU, eliminating Electron/Chromium overhead and high RAM usage.
+> - **Zero Transcoding:** Plays all formats natively (H.265/HEVC, AV1, VP9, ProRes, 10-bit MKVs, etc.) with hardware decoding—no background FFmpeg live-transcoding needed.
+> - **Hardware CRT Shaders:** Real-time GPU scanlines, phosphor mask, and curvature.
+> - **High Performance:** Instant boot times, low CPU usage, and silky-smooth non-stop ambient playback.
+> - **Active Development:** All bug fixes, new features, and desktop releases are exclusively developed at [github.com/alkali-softworks/wazoo](https://github.com/alkali-softworks/wazoo).
+
+---
+
+**Wazoo** was originally developed as an Electron-based ambient media engine designed for those who want to experience their local video collection without the burden of choice. Built as a "moving mood-board" for artists, designers, and curators, Wazoo provides a non-stop feed of visuals that flows continuously based on your library and optional search queries.
 
 Forget the play button. Just open Wazoo and let your media collection become the atmosphere.
 
 ---
 
-## 📦 Pre-Built Desktop Executables
+## 📦 Downloads & Releases
 
-For a quick and effortless setup without compiling from source, you can download the latest pre-compiled desktop versions directly from the [Nightly Releases Page](https://github.com/alkali-softworks/wazoo/releases/tag/nightly/):
+For the latest desktop releases (Windows, macOS, and Linux), please download the native Rust version from:
 
-*   **Windows (`.exe` Installer)**: [Wazoo-1.0.0.Setup.exe](https://github.com/alkali-softworks/wazoo/releases/download/nightly/Wazoo-1.0.0.Setup.exe)
-*   **macOS (`.zip` App Bundle - Apple Silicon)**: [Wazoo-darwin-arm64-1.0.0.zip](https://github.com/alkali-softworks/wazoo/releases/download/nightly/Wazoo-darwin-arm64-1.0.0.zip) (Apple Silicon arm64)
-*   **macOS (`.zip` App Bundle - Intel)**: [Wazoo-darwin-x64-1.0.0.zip](https://github.com/alkali-softworks/wazoo/releases/download/nightly/Wazoo-darwin-x64-1.0.0.zip) (Intel x64)
-*   **Linux (`.deb` Package)**: [wazoo-desktop_1.0.0_amd64.deb](https://github.com/alkali-softworks/wazoo/releases/download/nightly/wazoo-desktop_1.0.0_amd64.deb)
-*   **Linux (`.rpm` Package)**: [wazoo-desktop-1.0.0-1.x86_64.rpm](https://github.com/alkali-softworks/wazoo/releases/download/nightly/wazoo-desktop-1.0.0-1.x86_64.rpm)
-*   **NuGet Package**: [wazoo_desktop-1.0.0-full.nupkg](https://github.com/alkali-softworks/wazoo/releases/download/nightly/wazoo_desktop-1.0.0-full.nupkg)
+* 🚀 **[Wazoo (Rust) Latest Releases](https://github.com/alkali-softworks/wazoo/releases)**
 
 ---
 
@@ -30,31 +42,33 @@ Wazoo flips the script. Instead of making you "pick," it creates a **continuous,
 
 ---
 
-## ✨ Key Features
+## ✨ Features (Historical Electron Version)
 
 ### 🖼️ Ambient Orchestration
-Wazoo isn't a traditional player; it's a visual environment. Run multiple videos simultaneously in **Grid**, **Row**, or **Column** layouts. It automatically handles the layout, creating a dynamic media dashboard that stays active in the background of your workspace.
+Run multiple videos simultaneously in **Grid**, **Row**, or **Column** layouts. Handles layouts dynamically in the background of your workspace.
 
 ### 🌊 The Infinity Stream
-Experience your local library as a living river of content. The **Scroll Mode** provides a vertical feed that plays videos at random indices while scrolling at a constant rate. With smooth audio cross-fading based on visibility, it transforms your hard drive into a curated, non-stop stream of inspiration.
+Experience your local library as a living river of content. The **Scroll Mode** provides a vertical feed that plays videos at random indices while scrolling at a constant rate with smooth audio cross-fading.
 
 ### ⚡ H.265 (HEVC) Transcoding
-Don't let codec limitations slow you down. Chrome has trouble with HEVC, but Wazoo features a built-in **FFmpeg-powered transcoding engine** that live-converts H.265 content for seamless playback in the Electron environment.
+Built-in FFmpeg-powered transcoding engine that live-converted H.265 content for playback in the Electron environment *(note: the new Rust version plays H.265 natively without transcoding)*.
 
 ### 🔍 Smart Library Management
 * **Instant Search:** Find any video in your collection in milliseconds.
-* **Media Scanning:** Automatically indexes your folders into a lightning-fast local SQLite database.
-* **Persistent State:** Wazoo remembers where you left off, including your last search and window layout.
+* **Media Scanning:** Automatically indexes your folders into a local SQLite database.
+* **Persistent State:** Remembers where you left off, including your last search and window layout.
 
 ### 🌍 Global by Design
-Wazoo is built for everyone, with full localization support for **16+ languages**:
-*   **RTL Ready:** Native support for Arabic and Hebrew with automatic layout mirroring.
+Localization support for **16+ languages**:
+*   **RTL Ready:** Support for Arabic and Hebrew with automatic layout mirroring.
 *   **Multi-Lingual:** Support for English, Spanish, French, German, Japanese, Chinese, Hindi, Russian & more.
 *   **Alt-Drag Navigation:** Quickly move the window anywhere on your screen with a simple Alt+Drag.
 
-## 🚀 Local Development & Building from Source
+---
 
-If you want to run the engine in development mode or build a package locally:
+## 🚀 Archival Development Setup
+
+*(Note: For current development, please contribute to [wazoo (Rust)](https://github.com/alkali-softworks/wazoo).)*
 
 ### Prerequisites
 * [Node.js](https://nodejs.org/) (v20 or higher recommended)
@@ -62,8 +76,8 @@ If you want to run the engine in development mode or build a package locally:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/alkali-softworks/wazoo.git
-   cd wazoo-desktop
+   git clone https://github.com/alkali-softworks/wazoo-electron.git
+   cd wazoo-electron
    ```
 2. Install dependencies:
    ```bash
@@ -73,16 +87,12 @@ If you want to run the engine in development mode or build a package locally:
    ```bash
    npm run dev
    ```
-4. Build / Package locally (for your current operating system):
+4. Build / Package locally:
    ```bash
    npm run package
    ```
 
 ---
-
-## 🤝 Contributing
-
-Wazoo is built for creators and enthusiasts. If you'd like to contribute, feel free to fork the repo or submit a PR!
 
 ## 📄 License
 
