@@ -10,10 +10,8 @@
 >
 > ### Why switch to Wazoo (Rust)?
 > - **Native Media Engine:** Built on libmpv and WGPU, eliminating Electron/Chromium overhead and high RAM usage.
-> - **Zero Transcoding:** Plays all formats natively (H.265/HEVC, AV1, VP9, ProRes, 10-bit MKVs, etc.) with hardware decoding—no background FFmpeg live-transcoding needed.
-> - **Hardware CRT Shaders:** Real-time GPU scanlines, phosphor mask, and curvature.
+> - **Zero Transcoding:** Plays all formats natively (H.265/HEVC, AV1, VP9, ProRes, 10-bit MKVs, etc.) with no background FFmpeg transcoding needed.
 > - **High Performance:** Instant boot times, low CPU usage, and silky-smooth non-stop ambient playback.
-> - **Active Development:** All bug fixes, new features, and desktop releases are exclusively developed at [github.com/alkali-softworks/wazoo](https://github.com/alkali-softworks/wazoo).
 
 ---
 
@@ -51,7 +49,7 @@ Run multiple videos simultaneously in **Grid**, **Row**, or **Column** layouts. 
 Experience your local library as a living river of content. The **Scroll Mode** provides a vertical feed that plays videos at random indices while scrolling at a constant rate with smooth audio cross-fading.
 
 ### ⚡ H.265 (HEVC) Transcoding
-Built-in FFmpeg-powered transcoding engine that live-converted H.265 content for playback in the Electron environment *(note: the new Rust version plays H.265 natively without transcoding)*.
+Built-in FFmpeg-powered transcoding engine that converts H.265 content for playback in the Electron environment *(note: the new Rust version plays H.265 natively without transcoding)*.
 
 ### 🔍 Smart Library Management
 * **Instant Search:** Find any video in your collection in milliseconds.
